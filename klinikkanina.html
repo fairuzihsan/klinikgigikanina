@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klinik Gigi Kanina - Senyum Sehat Keluarga</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'kanina-primary': '#0D9488', // Teal Modern
+                        'kanina-dark': '#0F172A',    // Navy Dark
+                        'kanina-light': '#F0FDFA',   // Soft Teal BG
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=2068');
+            background-size: cover;
+            background-position: center;
+        }
+        .float-wa {
+            animation: pulse-green 2s infinite;
+        }
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-700 antialiased">
+
+    <nav class="bg-white fixed w-full z-50 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center gap-2">
+                        <i class="fa-solid fa-tooth text-3xl text-kanina-primary"></i>
+                        <div>
+                            <span class="block text-xl font-bold text-kanina-dark leading-none">KANINA</span>
+                            <span class="text-xs tracking-widest text-gray-500">DENTAL CLINIC</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover:text-kanina-primary font-medium">Beranda</a>
+                    <a href="#layanan" class="hover:text-kanina-primary font-medium">Layanan</a>
+                    <a href="#kabar-kanina" class="hover:text-kanina-primary font-medium">Promo</a>
+                    <a href="#dokter" class="hover:text-kanina-primary font-medium">Dokter</a>
+                    <a href="#lokasi" class="hover:text-kanina-primary font-medium">Lokasi</a>
+                    <a href="#booking" class="bg-kanina-primary text-white px-5 py-2.5 rounded-full font-medium hover:bg-teal-700 transition shadow-md">
+                        Booking
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-kanina-primary focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#home" class="block py-3 px-4 hover:bg-gray-50">Beranda</a>
+            <a href="#layanan" class="block py-3 px-4 hover:bg-gray-50">Layanan</a>
+            <a href="#kabar-kanina" class="block py-3 px-4 hover:bg-gray-50">Promo & Kegiatan</a>
+            <a href="#dokter" class="block py-3 px-4 hover:bg-gray-50">Dokter</a>
+            <a href="#lokasi" class="block py-3 px-4 hover:bg-gray-50">Lokasi</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="md:w-1/2 space-y-6">
+                <div class="inline-block bg-kanina-light text-kanina-primary px-4 py-1 rounded-full text-sm font-semibold mb-2 border border-teal-100">
+                    ✨ Melayani Sepenuh Hati
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold text-slate-800 leading-tight">
+                    Senyum Sehat Keluarga Dimulai <span class="text-kanina-primary">Di Sini.</span>
+                </h1>
+                <p class="text-lg text-gray-600">
+                    Klinik gigi modern dengan tim dokter profesional, tersebar di 3 lokasi strategis di Yogyakarta (Dongkelan, Maguwo, & Cebongan).
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="#booking" class="text-center bg-kanina-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-teal-700 transition shadow-lg">
+                        Buat Janji Temu
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="layanan" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">Layanan Unggulan</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Solusi lengkap untuk kesehatan gigi dan mulut Anda, mulai dari pencegahan hingga estetika.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="group p-8 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-kanina-light rounded-xl flex items-center justify-center text-kanina-primary text-2xl mb-6 group-hover:bg-kanina-primary group-hover:text-white transition">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Pemeriksaan Rutin</h3>
+                    <p class="text-gray-500 text-sm mb-4">Scaling (pembersihan karang gigi), tambal gigi, dan pencegahan gigi berlubang.</p>
+                </div>
+                <div class="group p-8 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-kanina-light rounded-xl flex items-center justify-center text-kanina-primary text-2xl mb-6 group-hover:bg-kanina-primary group-hover:text-white transition">
+                        <i class="fa-regular fa-face-smile-beam"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Estetika Gigi</h3>
+                    <p class="text-gray-500 text-sm mb-4">Bleaching (pemutihan), Veneer, dan pemasangan kawat gigi (Behel) untuk senyum sempurna.</p>
+                </div>
+                <div class="group p-8 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-kanina-light rounded-xl flex items-center justify-center text-kanina-primary text-2xl mb-6 group-hover:bg-kanina-primary group-hover:text-white transition">
+                        <i class="fa-solid fa-child-reaching"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Gigi Anak</h3>
+                    <p class="text-gray-500 text-sm mb-4">Pendekatan psikologis khusus agar anak tidak takut, perawatan gigi susu, dan edukasi.</p>
+                </div>
+                <div class="group p-8 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-kanina-light rounded-xl flex items-center justify-center text-kanina-primary text-2xl mb-6 group-hover:bg-kanina-primary group-hover:text-white transition">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Bedah Mulut</h3>
+                    <p class="text-gray-500 text-sm mb-4">Pencabutan gigi bungsu (odontektomi) dan prosedur bedah minor lainnya.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kabar-kanina" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-800">Kabar Kanina</h2>
+                    <p class="text-gray-600 mt-2">Update promo terbaru, edukasi, dan kegiatan sosial kami.</p>
+                </div>
+                <a href="#" class="hidden md:inline-block text-kanina-primary font-semibold hover:underline">Lihat Semua Berita →</a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white border rounded-2xl overflow-hidden hover:shadow-xl transition group">
+                    <div class="relative h-48 bg-gray-200">
+                        <span class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full z-10">PROMO</span>
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-kanina-primary">Diskon Behel 20%</h3>
+                        <p class="text-gray-600 text-sm mb-4">Dapatkan senyum rapi impianmu dengan harga spesial bulan ini.</p>
+                    </div>
+                </div>
+                <div class="bg-white border rounded-2xl overflow-hidden hover:shadow-xl transition group">
+                    <div class="relative h-48 bg-gray-200">
+                        <span class="absolute top-4 left-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full z-10">EDUKASI</span>
+                        <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-kanina-primary">Kapan Anak ke Dokter Gigi?</h3>
+                        <p class="text-gray-600 text-sm mb-4">Kenali waktu yang tepat untuk kunjungan pertama si kecil.</p>
+                    </div>
+                </div>
+                <div class="bg-white border rounded-2xl overflow-hidden hover:shadow-xl transition group">
+                    <div class="relative h-48 bg-gray-200">
+                        <span class="absolute top-4 left-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full z-10">KEGIATAN</span>
+                        <img src="https://images.unsplash.com/photo-1629909615184-74f495363b63?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-kanina-primary">Kunjungan Sekolah</h3>
+                        <p class="text-gray-600 text-sm mb-4">Tim Kanina berbagi keceriaan di TK Pertiwi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dokter" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-800">Dokter Kami</h2>
+                <p class="text-gray-600 mt-2">Tim profesional yang siap melayani dengan ramah.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="bg-white p-4 rounded-xl shadow border hover:-translate-y-2 transition">
+                    <div class="w-20 h-20 mx-auto bg-gray-200 rounded-full mb-3 border-2 border-kanina-primary overflow-hidden">
+                        <img src="https://randomuser.me/api/portraits/women/11.jpg" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-sm">drg. Annisa Yuristia</h3>
+                    <p class="text-xs text-kanina-primary mt-1">Dokter Gigi Umum</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow border hover:-translate-y-2 transition">
+                    <div class="w-20 h-20 mx-auto bg-gray-200 rounded-full mb-3 border-2 border-kanina-primary overflow-hidden">
+                        <img src="https://randomuser.me/api/portraits/women/22.jpg" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-sm">drg. Media Wening R.</h3>
+                    <p class="text-xs text-kanina-primary mt-1">Dokter Gigi Umum</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow border hover:-translate-y-2 transition">
+                    <div class="w-20 h-20 mx-auto bg-gray-200 rounded-full mb-3 border-2 border-kanina-primary overflow-hidden">
+                        <img src="https://randomuser.me/api/portraits/men/33.jpg" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-sm">drg. Ranto Hadiyatmoko</h3>
+                    <p class="text-xs text-kanina-primary mt-1">Dokter Gigi Umum</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow border hover:-translate-y-2 transition">
+                    <div class="w-20 h-20 mx-auto bg-gray-200 rounded-full mb-3 border-2 border-kanina-primary overflow-hidden">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-sm">drg. Yeni Sasmita</h3>
+                    <p class="text-xs text-kanina-primary mt-1">Dokter Gigi Umum</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow border hover:-translate-y-2 transition">
+                    <div class="w-20 h-20 mx-auto bg-gray-200 rounded-full mb-3 border-2 border-kanina-primary overflow-hidden">
+                        <img src="https://randomuser.me/api/portraits/women/55.jpg" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-sm">drg. Fika Kirana</h3>
+                    <p class="text-xs text-kanina-primary mt-1">Dokter Gigi Umum</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lokasi" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-slate-800 text-center mb-12">Lokasi 3 Cabang</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white border rounded-xl overflow-hidden hover:shadow-lg transition flex flex-col">
+                    <div class="bg-gray-200 h-48 w-full">
+                        <iframe class="w-full h-full" src="https://maps.google.com/maps?q=KLINIK+GIGI+KANINA+DONGKELAN&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                    <div class="p-6 flex-1">
+                        <h3 class="font-bold text-lg mb-2">Kanina Dongkelan</h3>
+                        <p class="text-sm text-gray-600 mb-3">Jl. Bantul, Dongkelan, Panggungharjo, Bantul.</p>
+                        <a href="https://maps.app.goo.gl/NaL1pUs71NKZ7QjC7" target="_blank" class="text-sm font-semibold text-kanina-primary hover:underline">Buka Maps →</a>
+                    </div>
+                </div>
+
+                <div class="bg-white border rounded-xl overflow-hidden hover:shadow-lg transition flex flex-col">
+                    <div class="bg-gray-200 h-48 w-full">
+                        <iframe class="w-full h-full" src="https://maps.google.com/maps?q=KLINIK+GIGI+KANINA+MAGUWO&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                    <div class="p-6 flex-1">
+                        <h3 class="font-bold text-lg mb-2">Kanina Maguwo</h3>
+                        <p class="text-sm text-gray-600 mb-3">Jl. Raya Tajem No.0.4, Maguwoharjo, Sleman.</p>
+                        <a href="https://maps.app.goo.gl/qR1sRJSaak6Ehe8WA" target="_blank" class="text-sm font-semibold text-kanina-primary hover:underline">Buka Maps →</a>
+                    </div>
+                </div>
+
+                <div class="bg-white border rounded-xl overflow-hidden hover:shadow-lg transition flex flex-col">
+                    <div class="bg-gray-200 h-48 w-full">
+                        <iframe class="w-full h-full" src="https://maps.google.com/maps?q=KLINIK+GIGI+KANINA+CEBONGAN&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                    <div class="p-6 flex-1">
+                        <h3 class="font-bold text-lg mb-2">Kanina Cebongan</h3>
+                        <p class="text-sm text-gray-600 mb-3">Jl. Kebon Agung Km 4.5, Tlogoadi, Sleman.</p>
+                        <a href="https://maps.app.goo.gl/qu3Jvho37xhcWeRJ9" target="_blank" class="text-sm font-semibold text-kanina-primary hover:underline">Buka Maps →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-kanina-dark text-slate-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-2">
+                    <h3 class="text-white text-xl font-bold mb-4">Klinik Gigi Kanina</h3>
+                    <p class="text-sm leading-relaxed mb-4">
+                        Mitra kesehatan gigi keluarga Anda di Yogyakarta. Melayani dengan hati & teknologi modern.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Layanan</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-kanina-primary">Pemeriksaan Rutin</a></li>
+                        <li><a href="#" class="hover:text-kanina-primary">Behel & Veneer</a></li>
+                        <li><a href="#" class="hover:text-kanina-primary">Gigi Anak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Hubungi Kami</h4>
+                    <p class="text-sm mb-2"><i class="fa-brands fa-whatsapp mr-2"></i> 0851-0037-1991</p>
+                    <p class="text-sm mb-2"><i class="fa-brands fa-whatsapp mr-2"></i> 0851-0137-1992</p>
+                    <p class="text-sm mb-2"><i class="fa-brands fa-whatsapp mr-2"></i> 0851-0037-1993</p>
+                </div>
+            </div>
+            <div class="border-t border-slate-700 pt-8 text-xs">
+                © 2026 Klinik Gigi Kanina. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/6285101371992" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition z-50 float-wa flex items-center justify-center w-16 h-16">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    </script>
+</body>
+</html>
